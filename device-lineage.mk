@@ -20,6 +20,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     ElmyraService
 
+# DSDS
+# Allows using eSIM even without EuiccGoogle (which requires GMS)
+# albeit the management UI is unavailable
+# PRODUCT_PROPERTY_OVERRIDES += \
+#     persist.radio.multisim.config=dsds \
+#     persist.vendor.mdm.multisim.cfg=dsds
+
 # EUICC
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
@@ -33,7 +40,7 @@ endif
 PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 
 # Lineage Health
-include hardware/google/pixel/lineage_health/device.mk
+# include hardware/google/pixel/lineage_health/device.mk
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -41,7 +48,7 @@ PRODUCT_PACKAGES += \
 
 # Parts
 PRODUCT_PACKAGES += \
-    GoogleParts
+    GoogleParts 
 
 # RCS
 PRODUCT_PACKAGES += \

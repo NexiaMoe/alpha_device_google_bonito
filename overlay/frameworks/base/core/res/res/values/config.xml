@@ -207,7 +207,7 @@
     <string name="config_dozeDoubleTapSensorType" translatable="false">com.google.sensor.double_touch</string>
 
     <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
-    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 
     <!-- Specifies whether to decouple the auto-suspend state of the device from the display on/off state. -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
@@ -347,4 +347,20 @@
     <string-array name="config_biometric_sensors" translatable="false" >
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
+
+    	    <!-- Specify if the fingerprint hardware support gestures-->	
+    <bool name="config_fingerprintSupportsGestures">true</bool>	
+    <!-- Device configuration indicating whether we should avoid using accelerated graphics	
+         in certain places to reduce RAM footprint. Allows to tune down 	
+         device's memory use without going to the point of causing applications to turn	
+         off features. -->	
+    <bool name="config_avoidGfxAccel">true</bool>	
+    <!-- Flag indicating whether notification and ringtone volumes	
+         are controlled together (aliasing is true) or not. -->	
+    <bool name="config_alias_ring_notif_stream_types">false</bool>	
+    <!-- Flag indicating whether the surface flinger has limited	
+         alpha compositing functionality in hardware.  If set, the window	
+         manager will disable alpha trasformation in animations where not	
+         strictly needed. -->	
+    <bool name="config_sf_limitedAlpha">true</bool>
 </resources>
